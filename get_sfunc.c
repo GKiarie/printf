@@ -11,7 +11,13 @@ int (*get_sfunc(const char c))(va_list)
 {
 	unsigned int n = 0;
 
-	format_t p[] = {{'c', print_c}, {'s', print_s}, {'%', print_percent}};
+	format_t p[] = {
+		{'c', print_c},
+		{'s', print_s},
+		{'%', print_percent},
+		{'d', print_decimal},
+		{'i', print_integer}
+	};
 
 	for (; p[n].spec; n++)
 	{

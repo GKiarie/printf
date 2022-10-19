@@ -27,5 +27,7 @@ int print_c(va_list parameter_args);
 int print_s(va_list parameter_args);
 int print_percent(__attribute__((unused))va_list parameter_args);
 int (*get_sfunc(const char a))(va_list);
+int print_decimal(va_list parameter_args);
+int print_integer(va_list parameter_args);
 
 #endif
