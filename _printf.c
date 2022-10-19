@@ -10,44 +10,42 @@
 
 int _printf(const char *format, ...)
 {
-	int i, j, len;
-	char *param_str;
-	char _char;
+	int i, len = 0;
+	int (*ptr)(va_list);
 
 	va_list parameter_args;
 
 	va_start(parameter_args, format);
 
-	for (i = 0; format[i] != '\0'; i++)
+	if (format == NULL)
+		return (-1);
+
+	for (i = 0; format[i]; i++)
 	{
 		if (format[i] != '%')
+		{
 			_putchar(format[i]);
+			len++;
+		}
 		else
 		{
-			switch (format[i + 1])
+			i++;
+			if (!format[i])
+				return (-1);
+			ptr = get_sfunc(format[i]);
+			if (ptr == NULL)
 			{
-				case 'c':
-					_char = va_arg(parameter_args, int);
-					_putchar(_char);
-					i++;
-					break;
-				case 's':
-					param_str = va_arg(parameter_args, char *);
-					len = 0;
-					while (param_str[j] != '\0')
-					{
-						_putchar(param_str[j]);
-						len += 1;
-						j++;
-					}
-					j++;
-					break;
-				default:
-					_putchar(format[i]);
-					break;
+				_putchar('%');
+				_putchar(format[i]);
+				len += 2;
+			}
+			else
+			{
+				len += ptr(parameter_args);
 			}
 		}
 	}
 	va_end(parameter_args);
-	return ((i - 1) + len);
+
+	return (len);
 }
