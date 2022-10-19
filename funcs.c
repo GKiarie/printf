@@ -2,13 +2,14 @@
 
 /**
   * print_c - function to print a character
-  * @paramerter_args: char to print
-  * Retutrn: no. of characters, -1 if NULL
+  * @parameter_args: char to print
+  * Return: no. of characters, -1 if NULL
   */
 
 int print_c(va_list parameter_args)
 {
 	char _char = va_arg(parameter_args, int);
+
 	return (_putchar(_char));
 }
 
@@ -33,9 +34,16 @@ int print_s(va_list parameter_args)
 	return (i);
 }
 
+/**
+  * print_percent - function to print percent sign
+  * @parameter_args: unused parameter
+  * Return: Always 1
+  */
+
 int print_percent(__attribute__((unused))va_list parameter_args)
 {
 	char c = '%';
+
 	_putchar(c);
 
 	return (1);
