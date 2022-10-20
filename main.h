@@ -8,6 +8,7 @@
   */
 #include <stdarg.h>
 #include <stddef.h>
+#include <stdio.h>
 
 /**
   * struct format - struct for printing various types
@@ -31,5 +32,8 @@ int print_decimal(va_list parameter_args);
 int print_integer(va_list parameter_args);
 int print_binary(va_list parameter_args);
 int bin_recursive(unsigned int num, int len);
+int print_unsigned(va_list parameter_args);
+int print_oct(va_list parameter_args);
+int print_hex(unsigned int n, unsigned int c);
 
 #endif

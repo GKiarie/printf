@@ -17,7 +17,8 @@ int (*get_sfunc(const char c))(va_list)
 		{'%', print_percent},
 		{'d', print_decimal},
 		{'i', print_integer},
-		{'b', print_binary}
+		{'b', print_binary},
+		{'u', print_unsigned}
 	};
 
 	for (; p[n].spec; n++)
