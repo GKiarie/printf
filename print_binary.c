@@ -1,6 +1,25 @@
 #include "main.h"
 
 /**
+  * bin_recursive - function to convert
+  * numbers in binary in recursive
+  * @num: num to print
+  * @len: length of num to print
+  * Return: length
+  */
+
+int bin_recursive(unsigned int num, int len)
+{
+	if (num / 2)
+	{
+		len = bin_recursive(num / 2, len + 1);
+	}
+	_putchar(num % 2 + '0');
+
+	return (len);
+}
+
+/**
   * print_binary - function that takes in unsigned
   * int and prints its binary equivalent
   * @parameter_args: unsigned int argument
@@ -9,28 +28,10 @@
 
 int print_binary(va_list parameter_args)
 {
-	unsigned int i, j, k, sum;
-	unsigned int a[32];
-	int count;
+	int count = 0;
 
-	j = va_arg(parameter_args, unsigned int);
-	k = 2147483648;
-	a[0] = j / k;
+	unsigned int num = va_arg(parameter_args, unsigned int);
 
-	for (i = 0; i < 32; i++)
-	{
-		k /= 2;
-		a[i] = (k / j) % 2;
-	}
-
-	for (i = 0, sum = 0, count = 0; i < 32; i++)
-	{
-		sum += a[i];
-		if (sum || i == 31)
-		{
-			_putchar('0' + a[i]);
-			count++;
-		}
-	}
+	count = bin_recursive(num, count) + 1;
 	return (count);
 }

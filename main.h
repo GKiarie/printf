@@ -30,5 +30,6 @@ int (*get_sfunc(const char a))(va_list);
 int print_decimal(va_list parameter_args);
 int print_integer(va_list parameter_args);
 int print_binary(va_list parameter_args);
+int bin_recursive(unsigned int num, int len);
 
 #endif
