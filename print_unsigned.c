@@ -3,7 +3,7 @@
 /**
   * print_unsigned - function to print unsigned
   * integer
-  * @parameter_args: 
+  * @parameter_args: input argument
   * Return: count of characters printed
   */
 

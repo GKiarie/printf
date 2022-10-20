@@ -51,7 +51,7 @@ int print_percent(__attribute__((unused))va_list parameter_args)
 
 /**
   * print_decimal - function to print base 10 num
-  * @parameter_args - decimal to print
+  * @parameter_args: decimal to print
   * Return: no. of chars printed
   */
 
@@ -101,7 +101,7 @@ int print_decimal(va_list parameter_args)
 
 /**
   * print_integer - function to print base 10 num
-  * @parameter_args - int to print
+  * @parameter_args: int to print
   * Return: no. of chars printed
   */
 
