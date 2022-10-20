@@ -22,7 +22,8 @@ int (*get_sfunc(const char c))(va_list)
 		{'o', print_oct},
 		{'x', print_x},
 		{'X', print_X},
-		{'S', print_S}
+		{'S', print_S},
+		{'R', print_rot13}
 	};
 
 	for (; p[n].spec; n++)
