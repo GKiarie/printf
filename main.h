@@ -9,6 +9,7 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
   * struct format - struct for printing various types
