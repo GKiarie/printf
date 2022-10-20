@@ -39,5 +39,6 @@ int print_x(va_list parameter_args);
 int print_X(va_list parameter_args);
 int print_S(va_list parameter_args);
 int print_p(va_list parameter_args);
+int print_pow(va_list parameter_args);
 
 #endif
