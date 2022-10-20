@@ -35,5 +35,7 @@ int bin_recursive(unsigned int num, int len);
 int print_unsigned(va_list parameter_args);
 int print_oct(va_list parameter_args);
 int print_hex(unsigned int n, unsigned int c);
+int print_x(va_list parameter_args);
+int print_X(va_list parameter_args);
 
 #endif
