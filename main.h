@@ -41,10 +41,6 @@ int print_X(va_list parameter_args);
 int print_S(va_list parameter_args);
 int print_p(va_list parameter_args);
 int print_pow(va_list parameter_args);
-<<<<<<< HEAD
-int print_r(va_list parameter_args);
-=======
 int print_rot13(va_list parameter_args);
->>>>>>> 7e22c24dbf5d199df4f96da366416a407bb80617
 
 #endif
